@@ -23,7 +23,6 @@ import {
 
 import SQLite from 'react-native-sqlite-storage';
 SQLite.DEBUG(true);
-SQLite.enablePromise(true);
 
 
 const database_name = "Test.db";
