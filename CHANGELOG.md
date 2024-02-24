@@ -1,5 +1,15 @@
 # Version History
 
+v7.0.0
+- 1. Improve compatibility with recent react-native versions 0.72+
+- 2. Drop support for older Android versions (< API Level 21)
+- 3. Drop support for older iOS versions (< 13.0)
+- 4. Bump sqlcipher version to 4.5.4
+- 5. Bump androidX sqlite version to 2.2.0
+
+v6.0.0
+- Use native A+ compatible promises and drop support for the callback interface https://github.com/mendix/react-native-sqlite-storage/commit/8f1ec7e5d3e71c190f3c3ffb23b3e59286cbbb37
+
 v5.1.0
  - Use SQLCipher by default
 

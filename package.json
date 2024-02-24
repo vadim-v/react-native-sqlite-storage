@@ -4,6 +4,7 @@
   "description": "SQLite3 bindings for React Native (Android & iOS)",
   "author": "Mendix, Andrzej Porebski",
   "license": "MIT",
+  "types": "sqlite.d.ts",
   "bugs": {
     "url": "https://github.com/vadim-v/react-native-sqlite3/issues"
   },
