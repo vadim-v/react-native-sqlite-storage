@@ -23,6 +23,7 @@ public class SQLitePluginPackage implements ReactPackage {
      * @deprecated Please use version without activity parameter
      * activity parameter is ignored
      */
+    @Deprecated
     public SQLitePluginPackage(Activity activity) {
         this();
     }

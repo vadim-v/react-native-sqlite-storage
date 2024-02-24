@@ -1,7 +1,13 @@
 {
   "name": "react-native-sqlite3",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "SQLite3 bindings for React Native (Android & iOS)",
+  "author": "Mendix, Andrzej Porebski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vadim-v/react-native-sqlite3/issues"
+  },
+  "homepage": "https://github.com/vadim-v/react-native-sqlite3",
   "main": "sqlite.js",
   "scripts": {
     "test": "echo \"Error: no test specified yet\" && exit 1"
@@ -28,14 +34,16 @@
     "react-native-sqlite3.podspec",
     "LICENCE"
   ],
-  "author": "Mendix, Andrzej Porebski",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vadim-v/react-native-sqlite3/issues"
-  },
-  "homepage": "https://github.com/vadim-v/react-native-sqlite3",
   "peerDependencies": {
-    "react-native": ">=0.14.0"
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.10"
+  },
+  "overrides": {
+    "@types/react": "^18.2.44"
   },
   "release-it": {
     "git": {
@@ -43,8 +51,8 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true,
-      "allowSameVersion": true
+      "publish": false,
+      "allowSameVersion": false
     },
     "github": {
       "release": true
