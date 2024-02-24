@@ -46,6 +46,15 @@
   "overrides": {
     "@types/react": "^18.2.44"
   },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens":"always",
+    "semi": true,
+    "endOfLine": "lf"
+  },
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",
