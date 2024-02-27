@@ -13,6 +13,7 @@
   },
   "keywords": [
     "react-native-sqlite-storage",
+    "react-native-sqlite",
     "react-component",
     "reactnative",
     "react-native",
@@ -20,7 +21,8 @@
     "sqlite3",
     "ios",
     "android",
-    "promise"
+    "promise",
+    "cordova-sqlite-storage"
   ],
   "files": [
     "lib/*",
@@ -29,6 +31,12 @@
     "react-native.config.js",
     "react-native-sqlite-storage.podspec"
   ],
+  "author": "Mendix, Andrzej Porebski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendix/react-native-sqlite-storage/issues"
+  },
+  "homepage": "https://github.com/mendix/react-native-sqlite-storage",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
@@ -37,18 +45,6 @@
     "react": "18.2.0",
     "react-native": "^0.72.10"
   },
-  "overrides": {
-    "@types/react": "^18.2.44"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "bracketSpacing": true,
-    "arrowParens": "always",
-    "semi": true,
-    "endOfLine": "lf"
-  },
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",
@@ -56,7 +52,7 @@
     },
     "npm": {
       "publish": false,
-      "allowSameVersion": false
+      "allowSameVersion": true
     },
     "github": {
       "release": true
