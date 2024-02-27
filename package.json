@@ -1,14 +1,14 @@
 {
-  "name": "react-native-sqlite3",
+  "name": "react-native-sqlite-storage",
   "version": "7.0.1-beta.0",
   "description": "SQLite3 bindings for React Native (Android & iOS)",
   "author": "Mendix, Andrzej Porebski",
   "license": "MIT",
   "types": "sqlite.d.ts",
   "bugs": {
-    "url": "https://github.com/vadim-v/react-native-sqlite3/issues"
+    "url": "https://github.com/vadim-v/react-native-sqlite-storage/issues"
   },
-  "homepage": "https://github.com/vadim-v/react-native-sqlite3",
+  "homepage": "https://github.com/vadim-v/react-native-sqlite-storage",
   "main": "sqlite.js",
   "scripts": {
     "test": "echo \"Error: no test specified yet\" && exit 1"
@@ -18,7 +18,7 @@
     "url": "https://github.com/mendix/react-native-sqlite-storage.git"
   },
   "keywords": [
-    "react-native-sqlite3",
+    "react-native-sqlite-storage",
     "react-component",
     "reactnative",
     "react-native",
@@ -32,7 +32,7 @@
     "lib/*",
     "platforms/*",
     "react-native.config.js",
-    "react-native-sqlite3.podspec",
+    "react-native-sqlite-storage.podspec",
     "LICENCE",
     "sqlite.d.ts"
   ],
