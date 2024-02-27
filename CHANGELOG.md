@@ -1,17 +1,18 @@
 # Version History
 
-v7.0.0
-- 1. Improve compatibility with recent react-native versions 0.72+
-- 2. Drop support for older Android versions (< API Level 21)
-- 3. Drop support for older iOS versions (< 13.0)
-- 4. Bump sqlcipher version to 4.5.4
-- 5. Bump androidX sqlite version to 2.2.0
+v6.1.3
+ 1. Add SUPPORTS_ENCRYPTION const to native module (iOS/Android)
+
+v6.1.0
+- Use SQLCipher by default
+
+v6.0.1
+ 1. Add missing error function to plugin.
 
 v6.0.0
-- Use native A+ compatible promises and drop support for the callback interface https://github.com/mendix/react-native-sqlite-storage/commit/8f1ec7e5d3e71c190f3c3ffb23b3e59286cbbb37
-
-v5.1.0
- - Use SQLCipher by default
+ 1. Added RNW>=0.62 WinRT CPP implementation thanks to tsytsarkin (https://github.com/andpor/react-native-sqlite-storage/pull/461)
+ 2. Fix xcode 12 compatibility (https://github.com/andpor/react-native-sqlite-storage/pull/447)
+ 3. Add warn method to the plugin (https://github.com/andpor/react-native-sqlite-storage/issues/402)
 
 v5.0.0
  1. Change RN to Google Maven (https://github.com/andpor/react-native-sqlite-storage/pull/405)
@@ -73,7 +74,7 @@ v3.3.0 (Extended thanks to dryganets for his significant contributions to this r
  3. All statements and queries are closed in finally statements in order to fix SQLiteCipher corner case crashes [PR #132] (https://github.com/andpor/react-native-sqlite-storage/pull/132)
  4. Minor style fix	in index.ios.callback.js and index.ios.promise.js [PR #136] (https://github.com/andpor/react-native-sqlite-storage/pull/136)
  5. Fix determination logic for opened db [PR #139] (https://github.com/andpor/react-native-sqlite-storage/pull/139)
- 6. Clean up in lib/sqlite.core.js [PR #138] (https://github.com/andpor/react-native-sqlite-storage/pull/138)
+ 6. Clean up in lib/sqlite.js [PR #138] (https://github.com/andpor/react-native-sqlite-storage/pull/138)
  7. Production grade logging for the Android plugin [PR #137] (https://github.com/andpor/react-native-sqlite-storage/pull/137)
  8. Remove pre-honeycomb workaround code in Android that was causing issues in SQL Cipher [PR #147] (https://github.com/andpor/react-native-sqlite-storage/pull/147)
  9. Fix broken Markdown headings [PR #153] (https://github.com/andpor/react-native-sqlite-storage/pull/153)

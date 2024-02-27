@@ -1,15 +1,9 @@
 {
-  "name": "react-native-sqlite-storage",
-  "version": "7.0.1-beta.0",
+  "name": "@mendix/react-native-sqlite-storage",
+  "version": "6.2.0-beta.1",
   "description": "SQLite3 bindings for React Native (Android & iOS)",
-  "author": "Mendix, Andrzej Porebski",
-  "license": "MIT",
-  "types": "sqlite.d.ts",
-  "bugs": {
-    "url": "https://github.com/vadim-v/react-native-sqlite-storage/issues"
-  },
-  "homepage": "https://github.com/vadim-v/react-native-sqlite-storage",
-  "main": "sqlite.js",
+  "main": "lib/sqlite.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified yet\" && exit 1"
   },
@@ -31,10 +25,9 @@
   "files": [
     "lib/*",
     "platforms/*",
+    "types/*",
     "react-native.config.js",
-    "react-native-sqlite-storage.podspec",
-    "LICENCE",
-    "sqlite.d.ts"
+    "react-native-sqlite-storage.podspec"
   ],
   "peerDependencies": {
     "react": "*",
@@ -42,7 +35,7 @@
   },
   "devDependencies": {
     "react": "18.2.0",
-    "react-native": "0.72.10"
+    "react-native": "^0.72.10"
   },
   "overrides": {
     "@types/react": "^18.2.44"
