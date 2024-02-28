@@ -46,8 +46,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.sqlcipher.database.SQLiteDatabase;
-import net.sqlcipher.database.SQLiteStatement;
+import net.zetetic.database.sqlcipher.SQLiteDatabase;
+import net.zetetic.database.sqlcipher.SQLiteStatement;
 
 public class SQLitePlugin extends ReactContextBaseJavaModule {
 
@@ -77,7 +77,7 @@ public class SQLitePlugin extends ReactContextBaseJavaModule {
 
     public SQLitePlugin(ReactApplicationContext reactContext) {
         super(reactContext);
-        SQLiteDatabase.loadLibs(reactContext);
+        System.loadLibrary("sqlcipher");
         this.context = reactContext.getApplicationContext();
         this.threadPool = Executors.newCachedThreadPool();
     }
@@ -419,10 +419,10 @@ public class SQLitePlugin extends ReactContextBaseJavaModule {
             FLog.v(TAG, "DB file is ready, proceeding to OPEN SQLite DB: " + dbfile.getAbsolutePath());
             SQLiteDatabase mydb;
             try {
-                mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), key, null, openFlags);
+                mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), key, null, openFlags, null );
                 Log.v(TAG, "DB open successfully");
             } catch (Exception e) {
-                mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), "", null, openFlags);
+                mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), "", null, openFlags, null);
                 Log.v(TAG, "DB open successfully with empty password");
                 mydb.changePassword(key);
                 Log.v(TAG, "Password was changed");
@@ -654,7 +654,7 @@ public class SQLitePlugin extends ReactContextBaseJavaModule {
                     FLog.d("executeSqlBatch", "INSERT");
                     needRawQuery = false;
 
-                    net.sqlcipher.database.SQLiteStatement myStatement = mydb.compileStatement(query);
+                    SQLiteStatement myStatement = mydb.compileStatement(query);
 
                     bindArgsToStatement(myStatement, queryParams[i]);
 
@@ -757,7 +757,7 @@ public class SQLitePlugin extends ReactContextBaseJavaModule {
         return QueryType.other;
     }
 
-    private void bindArgsToStatement(net.sqlcipher.database.SQLiteStatement myStatement, ReadableArray sqlArgs) {
+    private void bindArgsToStatement(SQLiteStatement myStatement, ReadableArray sqlArgs) {
         for (int i = 0; i < sqlArgs.size(); i++) {
             ReadableType type = sqlArgs.getType(i);
             if (type == ReadableType.Number) {
